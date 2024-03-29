@@ -2,12 +2,15 @@ import requests
 import datetime
 import time
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Define a list to store multiple API keys
 YOUTUBE_API_KEYS = [
-    'AIzaSyA7p5bNb6vhBHQOCnKid1RHTyGaosvL3To',  
-    'AIzaSyBGBS9pOCjUGqUnvBV7ZYqFgVisPiAf0ss',
-    'AIzaSyBx5ot2SZGO0P8aAZQK1k0HVSDLF7fN_A0',
+    os.getenv('YOUTUBE_API_KEY_1'),  
+    os.getenv('YOUTUBE_API_KEY_2'),
+    os.getenv('YOUTUBE_API_KEY_3'),
 ]
 SEARCH_QUERY = 'physics'
 
